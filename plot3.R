@@ -1,6 +1,6 @@
 require(ggplot2)
-#NEI <- readRDS("proj_data/summarySCC_PM25.rds")
-#SCC <- readRDS("proj_data/Source_Classification_Code.rds")
+NEI <- readRDS("proj_data/summarySCC_PM25.rds")
+SCC <- readRDS("proj_data/Source_Classification_Code.rds")
 
 
 # baltimore data and set the years
@@ -40,14 +40,3 @@ print(g)
 dev.off()
 
 
-
-
-
-
-# png(filename = 'plot3.png')
-# 
-# g <- ggplot(data = baltimoreData, aes(x = year, y = log(Emissions))) + geom_line() +  facet_grid(. ~ type) + guides(fill = F) +  ylab('Log of PM2.5 Emissions') + xlab('Year') + ggtitle('Emissions per Type in Baltimore') + geom_jitter(alpha = 0.10)
-# 
-# 
-# print(g)
-# dev.off()
