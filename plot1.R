@@ -1,6 +1,6 @@
-#NEI <- readRDS("proj_data/summarySCC_PM25.rds")
+NEI <- readRDS("proj_data/summarySCC_PM25.rds")
 
-#SCC <- readRDS("proj_data/Source_Classification_Code.rds")
+SCC <- readRDS("proj_data/Source_Classification_Code.rds")
 
 Emissions <- aggregate(NEI[, 'Emissions'], by = list(NEI$year), FUN = sum)
 Emissions$PM <- round(Emissions[, 2] / 1000, 2)
